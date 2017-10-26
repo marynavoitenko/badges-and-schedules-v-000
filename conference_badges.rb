@@ -4,9 +4,17 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(names)
-  badgearray = []
+  badges = []
   names.each do |name|
-    badgearray << badge_maker(name)
+    badges << badge_maker(name)
   end
-  badgearray
+  badges
+end
+
+def assign_rooms(names)
+  rooms = []
+  room = 0
+  names.each do |name|
+    rooms << "Hello, #{name}! You'll be assigned to room #{room}!"
+    room += 1
 end
